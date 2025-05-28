@@ -29,7 +29,7 @@ export default function Edit() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:7000/api/getone/${id}`,user)
+        axios.get(`http://localhost:8000/api/getone/${id}`,user)
             .then((res) => {
                 setuser(res.data)
             }).catch((err) => console.log(err))
@@ -40,7 +40,7 @@ export default function Edit() {
     const updatesubmit=async(e)=>{
         e.preventDefault()
 
-        await axios.put(`http://localhost:7000/api/update/${id}`,user)
+        await axios.put(`http://localhost:8000/api/update/${id}`,user)
         .then((res)=>{
             toast.success("User updated",{position:"top-right"})
             console.log(res);
