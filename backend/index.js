@@ -16,6 +16,17 @@ app.use(bodyParser.json());
 
 app.use("/api",route)
 
+const path = require('path');
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../my-app/build')));
+
+// The "catchall" handler: for any request that doesn't match an API route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../my-app/build', 'index.html'));
+});
+
+
 
 
 app.listen(port,()=>{
