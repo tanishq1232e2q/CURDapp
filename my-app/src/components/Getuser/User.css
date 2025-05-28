@@ -1,0 +1,31 @@
+.usertable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+   
+    width: 70%;
+}
+form {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+form input{
+    width: 20rem;
+    height: 2rem;
+    margin: 1rem 0rem;
+}
+form label{
+    margin-right: 2rem;
+}
+
+.cls{
+    border-radius: 12px ;
+    width: 6rem;
+    padding: 1rem;
+    background-color: aquamarine;
+    margin: 0rem 1rem;
+}
