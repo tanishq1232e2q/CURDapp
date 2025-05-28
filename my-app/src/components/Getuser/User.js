@@ -15,7 +15,7 @@ export default function User() {
 
     const fetchdata=async()=>{
 
-      const response =await axios.get("http://localhost:7000/api/getall")
+      const response =await axios.get("http://localhost:8000/api/getall")
       console.log(response);
       setusers(response.data)
     }
@@ -25,7 +25,7 @@ export default function User() {
   }, [])
   const deleteuser=async(userid)=>{
     console.log(userid);
-    await axios.delete(`http://localhost:7000/api/delete/${userid}`)
+    await axios.delete(`http://localhost:8000/api/delete/${userid}`)
     .then((res)=>{
       setusers((deluser)=>deluser.filter((user)=>user._id!==userid))
       toast.success("User deleted",{position:"top-right"})
